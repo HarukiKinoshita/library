@@ -3,56 +3,56 @@
 
 # base config in partials/branding, partials/head
 branding:
-  name: Library
-  prettyName: Team Library
-  org: Your Organization
+  name: KnowledgeBase
+  prettyName: KnowledgeBase
+  org: TEDxUTsukuba
   icon: /assets/images/icon-logo.svg
   favicon: /assets/images/library.ico
 
 # pages/categories, pages/index, partials/search
 landing:
-  tagline: One place for your organization's documents.
-  viewAll: View All
-  quickLink: <a href="/get-started">Get Started.</a>
+  tagline: 歴代の議事録とマニュアルのすべてがここに。
+  viewAll: コンテンツ一覧
+  # quickLink: <a href="/get-started">Get Started.</a>
   modules:
     - tag: team
-      label: Find by team
+      label: チーム
       style: button
     - tag: featured
-      label: Useful Docs
+      label: 重要なドキュメント
       style: docs
 
 
 # partials/footer
 footer:
-  helpText: Questions? Contact your organization's administrators.
-  defaultEmail: user@your_organization.com
+  helpText: Any issues? Contact your organization's administrators.
+  defaultEmail: harukikinoshita@outlook.com
   buttons:
-    edit: Edit This Page
-    move: Move This Page
-    create: Create New Page
-    viewFolder: View Folder
+    edit: このページを編集
+    move: このページを移動
+    create: ページを新規作成
+    viewFolder: フォルダを表示
 
 # pages/search, partials/search
 search:
   placeholder: Search...
   results:
-    title: !!js/function (query) => `Search results for ${query}`
-    kicker: !!js/function (query) => `Showing results for '${query}':`
+    title: !!js/function (query) => `${query} の検索結果`
+    kicker: !!js/function (query) => `'${query}' に対する検索結果を表示`
     label:
       folder: !!js/function (path, folder) => `Filed under <a class="folder" href=${path}><span>${folder}</span></a>`
-      person: !!js/function (lastUser) => `Last edited by <span class='author'>${lastUser}`
+      person: !!js/function (lastUser) => `最終更新 <span class='author'>${lastUser}`
     none:
-      kicker: !!js/function (query) => `There are no results for '${query}'`
-      suggestion: To request a new page, contact your administrators.
+      kicker: !!js/function (query) => `'${query}' に対する検索結果はありませんでした。`
+      suggestion: 違うキーワードで検索するか、管理者までお問い合わせください。
 
 # categories/default
 folder:
   childrenList:
-    kicker: !!js/function (title) => `Pages in ${title}`
+    kicker: !!js/function (title) => `${title} に含まれるコンテンツ:`
   # partials/sectionList
   sectionList:
-    heading: "Table of Contents:"
+    heading: "目次"
   #partials/siblingList
   siblingList:
     heading: Related Docs
@@ -71,18 +71,18 @@ playlist:
 error:
   403:
     title: Operation Not Permitted
-    heading: Not Authorized
+    heading: アクセス権限がありません
     message: "<p>The page you're trying to access is forbidden. Please try <a href='/login'>logging in</a> with another account, or contact your organization's administrators for assistance.</p>"
   404:
     title: Page Not Found
-    heading: Whoops, that's a 404.
+    heading: お探しのページは見つかりません
     message: Perhaps try to search for something else instead?
   500:
     title: Server Error
-    heading: Uh oh, that's a 500.
+    heading: サーバでエラーが発生しています
     message: Perhaps try to search for something else instead?
 
 # warning messages
 warning:
-  duplicate: !!js/function (names, folderId) => `Multiple resources in <a href="https://drive.google.com/drive/u/0/folders/${folderId}" target="_blank">this folder</a> share the same name&#58; ${names.join(', ')}. Only one will be accesible through Library.`
+  duplicate: !!js/function (names, folderId) => `フォルダ内に名称が重複しているファイル &#58; ${names.join(', ')} が存在します。仕様上、このシステム上には1つのファイルしか表示されません。すべてのファイルを表示するには <a href="https://drive.google.com/drive/u/0/folders/${folderId}" target="_blank">Google Drive</a> で閲覧してください。`
 

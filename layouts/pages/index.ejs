@@ -27,7 +27,11 @@
           <!-- Eventually we might display a warning here about why this space is empty. -->
           <% } %>
         </div>
-
+        <div style="text-align: center;">
+          <a class="button btn-homepage" href="/categories">
+            <%- template('landing.viewAll') %>
+          </a>
+        </div>
       </div>
       <%- include('partials/footer', {style: 'homepage', pageType: 'homepage'}) %>
     </div>
