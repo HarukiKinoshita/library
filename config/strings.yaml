@@ -26,7 +26,7 @@ landing:
 # partials/footer
 footer:
   helpText: Any issues? Contact your organization's administrators.
-  defaultEmail: harukikinoshita@outlook.com
+  defaultEmail: tedxutsukuba@gmail.com
   buttons:
     edit: このページを編集
     move: このページを移動
