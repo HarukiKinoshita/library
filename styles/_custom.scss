@@ -1,0 +1,54 @@
+.button {
+  font-weight: 500;
+}
+
+.g-main-content {
+
+  p,
+  ul,
+  li,
+  dt,
+  dd {
+    font-family: $font-sans;
+    font-weight: 400 !important;
+    font-size: 1rem;
+    line-height: 1.4;
+
+    @include tablet {
+      font-size: 1.125rem;
+      line-height: 1.5;
+    }
+
+    @include desktop {
+      font-size: 1.125rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+.branding-label {
+  font-weight: 800 !important;
+}
+
+.g-upper-body {
+  margin: 120px auto 30px auto;
+
+  .warning {
+    background-color: #F6F8FA;
+  }
+}
+
+#main-search-page {
+  min-height: 0 !important;
+}
+
+.tagline {
+  font-family: $font-branding;
+  font-weight: normal;
+}
+
+.masthead .container .branding .branding-heading .logo {
+  height: 23px;
+  filter: none;
+  margin-left: -5px;
+}

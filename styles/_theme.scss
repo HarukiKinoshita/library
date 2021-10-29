@@ -1,15 +1,17 @@
-// Fonts
-//------------------------------------------------------------------------------
 // Font imports
-@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;700&display=swap');
 
-$font-branding: 'Alfa Slab One', cursive;
-$font-headline: 'Open Sans', sans-serif;
-$font-sans: 'Open Sans', sans-serif;
-
-// Colors
-//------------------------------------------------------------------------------
-// Default Light Theme
+// Example Light Theme
+$font-branding: "Helvetica Neue",
+arial,
+helvetica,
+cursive;
+$font-headline: "Noto Sans",
+arial,
+helvetica,
+sans-serif;
+$font-sans: "Noto Sans",
+sans-serif;
 $masthead-background: $gray-10;
 $main-homepage-background: $white;
 $main-homepage-icon-color: $black;
@@ -30,3 +32,4 @@ $elem-link-color: $gray-50;
 $elem-active-link-color: $gray-50;
 $elem-link-accent: $accent;
 $nav-text-color: $gray-40;
+$accent: #ff0000;
