@@ -30,10 +30,25 @@
   font-weight: 800 !important;
 }
 
-.g-upper-body .warning {
-  background-color: #F6F8FA;
+.g-upper-body {
+  margin: 120px auto 30px auto;
+
+  .warning {
+    background-color: #F6F8FA;
+  }
 }
 
 #main-search-page {
   min-height: 0 !important;
+}
+
+.tagline {
+  font-family: $font-branding;
+  font-weight: normal;
+}
+
+.masthead .container .branding .branding-heading .logo {
+  height: 23px;
+  filter: none;
+  margin-left: -5px;
 }

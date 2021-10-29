@@ -11,7 +11,7 @@ branding:
 
 # pages/categories, pages/index, partials/search
 landing:
-  tagline: 歴代の議事録とマニュアルのすべてがここに。
+  tagline: Learn from yesterday, live for today.
   viewAll: コンテンツ一覧
   # quickLink: <a href="/get-started">Get Started.</a>
   modules:
@@ -19,7 +19,7 @@ landing:
       label: チーム
       style: button
     - tag: featured
-      label: 重要なドキュメント
+      label: ピン留めアイテム
       style: docs
 
 

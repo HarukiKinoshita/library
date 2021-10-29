@@ -9,16 +9,13 @@
     <div class="attribution">
         <% if (locals.byline) { %>
           <p>
-            By <span class="author"><%=locals.byline %></span>.
+            Created by <span class="author"><%=locals.byline %></span> <% if (locals.byline) { %> <span class="date" data-date="<%= locals.createdAt %>"></span><% } %>.
           </p>
         <% } %>
         <% if (locals.lastUpdatedBy || locals.byline) { %>
           <p>
             <% if (locals.lastUpdatedBy) { %>
               Last edited by <span class="author"><%= lastUpdatedBy %></span><span class="date" data-date="<%= locals.modifiedAt %>"></span>.
-            <% } %>
-            <% if (locals.byline) { %>
-              Created <span class="date" data-date="<%= locals.createdAt %>"></span>.
             <% } %>
           </p>
         <% } %>
