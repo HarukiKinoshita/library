@@ -172,12 +172,12 @@ function produceTree(files, firstParent) {
     // prepare data for the individual file and store later for reference
     // FIXME: consider how to remove circular dependency here.
     const prettyName = docs.cleanName(name)
-    const slug = docs.slugify(prettyName)
+    const slug = docs.slugify(encodeURI(prettyName))
     const tagString = (name.match(/\|\s*([^|]+)$/i) || [])[1] || ''
     const tags = tagString.split(',')
       .map((t) => t.trim().toLowerCase())
       .filter((t) => t.length > 0)
-
+    // log.debug(`${name} | ${slug}`)
     if (!mimeType.includes('folder') && !tags.includes('hidden')) fileNames.push(prettyName)
 
     byId[id] = Object.assign({}, resource, {
@@ -276,7 +276,8 @@ function buildTreeFromData(rootParent, previousData, breadcrumb) {
       // recurse building up breadcrumb
       memo.children[slug] = buildTreeFromData(id, previousData, nextCrumb)
     } else {
-      log.warn(`Folder ${parentInfo.name} contains duplicate resources with slug ${slug}`)
+      // ここを修正
+      log.warn(`Folder ${parentInfo.name} contains duplicate resources with slug ${slug}, ${id}`)
       const {name} = docsInfo[id]
       const previousDupes = memo.children[slug].duplicates || []
       memo.children[slug].duplicates = previousDupes.concat(name)
